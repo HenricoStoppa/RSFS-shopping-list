@@ -14,6 +14,62 @@
         <link rel="stylesheet" href="/src/styles/index.css" />
     </head>
     <body>
+        <header id="header-container">
+            <img
+                src="./src/images/logo.png"
+                alt="Logo da quicklist"
+                class="logo-header"
+            />
+        </header>
+
+        <main id="main-container">
+            <div class="shopping-list">
+                <h1 class="title">Compras da semana</h1>
+
+                <form action="" method="get" class="add-item-form">
+                    <label for="add-new-item">Adicione um novo item</label>
+                    <input
+                        type="text"
+                        name="add-new-item"
+                        id="add-new-item"
+                        placeholder="Adicione um novo item"
+                    />
+
+                    <button class="submit-button" type="submit">
+                        Adicionar item
+                    </button>
+                </form>
+
+                <div class="itens">
+                    <ul class="item-list"></ul>
+
+                    <div class="deleted-message">
+                        <div class="message">
+                            <img
+                                src="./src/assets/warning-circle-filled.svg"
+                                alt="Ícone de atenção"
+                            />
+
+                            <span class="message-text"
+                                >O item foi removido da lista
+                            </span>
+                        </div>
+
+                        <button
+                            class="dismiss-message-button"
+                            type="button"
+                            onclick="dismissDeletedItemMessage()"
+                        >
+                            <img
+                                src="./src/assets/delete-small.svg"
+                                alt="Ícone de X"
+                            />
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </main>
+
         <script src="./src/scripts/script.js"></script>
     </body>
 </html>
