@@ -1,0 +1,209 @@
+/* MAIN */
+#main-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    width: 100%;
+
+    gap: 3.12rem;
+}
+
+/* SHOPPING LIST */
+.shopping-list {
+    width: 60rem;
+
+    margin-top: 5rem;
+}
+
+/* TITLE */
+.title {
+    font: var(--font-title);
+    color: var(--content-primary);
+
+    margin-bottom: 4.4rem;
+}
+
+/* FORM */
+.add-item-form {
+    display: flex;
+    justify-content: space-between;
+    gap: 1.6rem;
+
+    margin-bottom: 3rem;
+}
+
+label {
+    display: none;
+}
+
+#add-new-item {
+    font: var(--font-paragraph);
+
+    width: 100%;
+
+    padding: 1rem;
+
+    outline: none;
+    border: 2px solid var(--border-primary);
+    border-radius: 1.2rem;
+}
+
+#add-new-item::placeholder {
+    color: var(--content-tertiary);
+}
+
+#add-new-item:focus {
+    border-color: var(--border-hover);
+}
+
+#add-new-item:active {
+    color: var(--content-primary);
+
+    border-color: var(--color-brand-hover);
+}
+
+.submit-button {
+    background-color: var(--color-brand);
+
+    font: var(--font-label);
+    color: var(--always-white);
+
+    width: 20rem;
+
+    cursor: pointer;
+
+    border: none;
+    border-radius: 1.2rem;
+
+    transition: 200ms;
+}
+
+.submit-button:hover {
+    background-color: var(--color-brand-hover);
+}
+
+/* ITEM LIST */
+.item-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+
+    margin-bottom: 3rem;
+
+    list-style: none;
+}
+
+.item {
+    background-color: var(--background-secondary);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 1.3rem;
+
+    border-radius: 1.2rem;
+}
+
+.item-description {
+    display: flex;
+    gap: 1rem;
+}
+
+.item-name {
+    font: var(--font-paragraph);
+    color: var(--content-primary);
+}
+
+#check-item {
+    cursor: pointer;
+
+    accent-color: var(--color-brand);
+}
+
+#check-item:hover {
+    border-color: var(--border-hover);
+}
+
+.delete-item-button {
+    background-color: transparent;
+
+    display: flex;
+    justify-content: center;
+
+    cursor: pointer;
+
+    border: none;
+
+    transition: 200ms;
+}
+
+.delete-item-button:hover {
+    scale: 1.1;
+}
+
+/* DELETED MESSAGE */
+.deleted-message {
+    display: none;
+
+    transition: 300ms;
+}
+
+.show-message {
+    background-color: var(--color-danger);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0.7rem;
+
+    border-radius: 1.2rem;
+}
+
+.message {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.message-text {
+    font: var(--font-label);
+    color: var(--always-white);
+}
+
+.dismiss-message-button {
+    background-color: transparent;
+    border: none;
+
+    display: flex;
+    justify-content: center;
+
+    cursor: pointer;
+}
+
+.dismiss-message-button:hover {
+    scale: 1.1;
+}
+
+/* RESPOSIVE */
+@media (max-width: 430px) {
+    /* FORM */
+    .add-item-form {
+        display: block;
+    }
+
+    .submit-button {
+        width: 100%;
+
+        margin-top: 1rem;
+        padding: 1rem;
+    }
+
+    /* SHOPPING LIST */
+    .shopping-list {
+        width: 90%;
+    }
+}
