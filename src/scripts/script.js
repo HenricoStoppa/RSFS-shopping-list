@@ -45,40 +45,32 @@ function addItem(newItemName) {
                     />
                 </button>`;
 
-        // Add HTML base to new li
         newListItem.innerHTML = newItem;
 
         // Append li to item List (ul)
         itemList.append(newListItem);
 
-        // Clean item name input
         itemName.value = "";
     } catch (error) {
-        // Log error message
         console.log(error);
 
-        // Show alert message
         alert("Ocorreu um problema, tente novamente mais tarde!");
     }
 }
 
-// Remove item from the list
 function removeItem(item) {
     // Remove button parent
     item.parentElement.remove();
 
-    // Show deleted item message
     showDeletedItemMessage();
 }
 
-// Show deleted item message
 function showDeletedItemMessage() {
     itemDeletedMessage.classList.add("show-message");
 
     setTimeout(dismissDeletedItemMessage, 5000);
 }
 
-// Dismiss deleted item message
 function dismissDeletedItemMessage() {
     itemDeletedMessage.classList.remove("show-message");
 }
