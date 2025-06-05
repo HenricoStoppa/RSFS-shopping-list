@@ -1,0 +1,50 @@
+/* DARK MODE */
+@media (prefers-color-scheme: dark) {
+    /* GLOBAL */
+    body {
+        background-color: var(--dark-bg-primary);
+    }
+
+    /* TITLE */
+    .title {
+        color: var(--always-white);
+    }
+
+    /* FORM */
+    #add-new-item {
+        background-color: var(--dark-bg-primary);
+
+        color: var(--always-white);
+
+        border-color: var(--dark-border-primary);
+    }
+
+    #add-new-item::placeholder {
+        color: var(--content-tertiary);
+    }
+
+    #add-new-item:focus {
+        border-color: var(--dark-border-hover);
+    }
+
+    #add-new-item:active {
+        border-color: var(--color-brand-hover);
+    }
+
+    /* ITEM LIST */
+    .item {
+        background-color: var(--dark-bg-secondary);
+    }
+
+    .item-name {
+        color: var(--always-white);
+    }
+
+    .delete-item-button .light {
+        display: none;
+    }
+
+    .delete-item-button .dark {
+        display: block;
+    }
+}

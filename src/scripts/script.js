@@ -34,8 +34,13 @@ function addItem(newItemName) {
 
                 <button class="delete-item-button" type="button" onClick="removeItem(this)">
                     <img
-                        class="item-delete-img"
+                        class="item-delete-img light"
                         src="./src/assets/trashcan.svg"
+                        alt="Ícone de lixeira"
+                    />
+                    <img
+                        class="item-delete-img dark"
+                        src="./src/assets/trashcan-white.svg"
                         alt="Ícone de lixeira"
                     />
                 </button>`;

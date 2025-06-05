@@ -144,6 +144,14 @@ label {
     scale: 1.1;
 }
 
+.delete-item-button .light {
+    display: block;
+}
+
+.delete-item-button .dark {
+    display: none;
+}
+
 /* DELETED MESSAGE */
 .deleted-message {
     display: none;
